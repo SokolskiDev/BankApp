@@ -2,23 +2,38 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
         }
 
+        //Login button
         private void OnCounterClicked(object? sender, EventArgs e)
         {
-            count++;
+            Shell.Current.GoToAsync("//UserPage");
+        }
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+        //Fingerprint button
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            lb_greeting.Text = "Dotknąłeś odcisku palca!";
+        }
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+        private void ImageButton_Clicked_1(object sender, EventArgs e)
+        {
+            Shell.Current.GoToAsync("//BlikPage");
+        }
+
+        private void mobile_transfer_Clicked(object sender, EventArgs e)
+        {
+            Shell.Current.GoToAsync("//MobileTransferPage");
+
+        }
+
+        private void help_Clicked(object sender, EventArgs e)
+        {
+            Shell.Current.GoToAsync("//HelpPage");
+
         }
     }
 }

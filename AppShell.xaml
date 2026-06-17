@@ -4,11 +4,27 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:BankApp"
-    Title="BankApp">
+    Title="BankApp"
+    Shell.TabBarIsVisible="False">
 
     <ShellContent
-        Title="Home"
+        Title="Strona główna"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+        Route="MainPage"/>
+    <ShellContent
+        Title="Strona użytkownika"
+        ContentTemplate="{DataTemplate local:UserPage}"
+        Route="UserPage"/>
+    <ShellContent
+        Title="BLIK"
+        ContentTemplate="{DataTemplate local:BlikPage}"
+        Route="BlikPage"/>
+    <ShellContent
+        Title="Przelew na telefon"
+        ContentTemplate="{DataTemplate local:MobileTransferPage}"
+        Route="MobileTransferPage"/>
+    <ShellContent
+        Title="Pomoc"
+        ContentTemplate="{DataTemplate local:HelpPage}"
+        Route="HelpPage"/>
 </Shell>
