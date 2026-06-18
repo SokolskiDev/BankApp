@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BankApp.MainPage"
              NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="background.png" 
              >
 
     <ScrollView>
         <!--Image Source="background.png" HorizontalOptions="Fill" VerticalOptions="Center"/-->
-        <Grid BackgroundColor="WhiteSmoke">
+        <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
@@ -16,7 +17,7 @@
                 <RowDefinition Height="8*"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <VerticalStackLayout Grid.Row="0" BackgroundColor="LightBlue" >
+            <VerticalStackLayout Grid.Row="0" BackgroundColor="#63ADD8E6" >
                 <Label Text="PKO BP" FontSize="48" HorizontalOptions="Center" Margin="20" TextColor="Black"/>
 
             </VerticalStackLayout>
@@ -54,7 +55,7 @@
                     FontSize="Small"
                     BackgroundColor="LightSkyBlue"/>
             </VerticalStackLayout>
-            <Grid Grid.Row="2" BackgroundColor="LightBlue" >
+            <Grid Grid.Row="2" BackgroundColor="#63ADD8E6" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>

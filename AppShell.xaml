@@ -5,7 +5,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:BankApp"
     Title="BankApp"
-    Shell.TabBarIsVisible="False">
+    Shell.TabBarIsVisible="False"
+    Shell.NavBarIsVisible="False"
+    >
 
     <ShellContent
         Title="Strona główna"

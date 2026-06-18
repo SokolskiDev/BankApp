@@ -2,11 +2,95 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BankApp.UserPage"
-             Title="NewPage1">
-    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Label 
-            Text="Strona po zalogowaniu"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" FontSize="48"/>
-    </VerticalStackLayout>
+             Title="NewPage1"
+             BackgroundImageSource="background.png">
+    <ScrollView>
+        <VerticalStackLayout HorizontalOptions="Fill">
+            <Label 
+            Text="Dzień dobry, User"
+            TextColor="Black"
+            HorizontalTextAlignment="Start" FontSize="32"
+            Padding="20,40,10,10"/>
+            <Grid BackgroundColor="#63ADD8E6" Margin="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Saldo:" Grid.Column="0" Grid.Row="0" TextColor="Black" FontSize="28" Padding="20"/>
+                <Label Text="715234,63 PLN" Grid.Column="1" Grid.Row="0" TextColor="Black" FontSize="28" Padding="20"/>
+            </Grid>
+            <Grid BackgroundColor="#63ADD8E6" Margin="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="PKO Konto dla Młodzieży" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" TextColor="Black" FontSize="14" Padding="20,5,5,5"/>
+                <Label Text="Saldo:" Grid.Column="0" Grid.Row="1" TextColor="Black" FontSize="28" Padding="20,5,20,15"/>
+                <Label Text="715234,63 PLN" Grid.Column="1" Grid.Row="1" TextColor="Black" FontSize="28" Padding="20,5,20,15"/>
+            </Grid>
+            <Grid BackgroundColor="#63ADD8E6" Margin="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="PKO Konto oszczędnościowe" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" TextColor="Black" FontSize="14" Padding="20,5,5,5"/>
+                <Label Text="Saldo:" Grid.Column="0" Grid.Row="1" TextColor="Black" FontSize="28" Padding="20,5,20,15"/>
+                <Label Text="0 PLN" Grid.Column="1" Grid.Row="1" TextColor="Black" FontSize="28" Padding="20,5,20,15"/>
+            </Grid>
+            <Grid Margin="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btn_historia" Text="Historia" Grid.Column="0" BackgroundColor="DeepSkyBlue" Margin="10" FontSize="18" Clicked="btn_historia_Clicked"/>
+                <Button x:Name="btn_przelew" Text="Przelew" Grid.Column="1" BackgroundColor="DeepSkyBlue" Margin="10" FontSize="18" Clicked="btn_przelew_Clicked"/>
+
+            </Grid>
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <VerticalStackLayout Margin="10">
+                    <ImageButton Source="bag.png" HeightRequest="25"/>
+                    <Label Text="Oszczędności" TextColor="Black" FontSize="10" Padding="3" HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Margin="10">
+                    <ImageButton Source="blik_icon.png" HeightRequest="25"/>
+                    <Label Text="BLIK" TextColor="Black" FontSize="10" Padding="3" HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Margin="10">
+                    <ImageButton Source="speedometer.png" HeightRequest="25"/>
+                    <Label Text="Limity płatności" TextColor="Black" FontSize="10" Padding="3" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" WidthRequest="50"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Margin="10">
+                    <ImageButton Source="mobile_transfer.png" HeightRequest="25"/>
+                    <Label Text="Przelew na telefon" TextColor="Black" FontSize="10" Padding="3" HorizontalTextAlignment="Center" LineBreakMode="CharacterWrap" WidthRequest="50"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Margin="10">
+                    <ImageButton Source="phone.png" HeightRequest="25"/>
+                    <Label Text="Kontakt" TextColor="Black" FontSize="10" Padding="3" HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Margin="10">
+                    <ImageButton Source="diagram.png" HeightRequest="25"/>
+                    <Label Text="Wykres" TextColor="Black" FontSize="10" Padding="3" HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="DeepSkyBlue" >
+                <Image Source="setting.png" HeightRequest="48" Margin="20" VerticalOptions="Center"/>
+                <Label Text="Dostosuj widok" VerticalOptions="Center" Padding="20" FontSize="36"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+    </ScrollView>
 </ContentPage>
