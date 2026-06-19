@@ -5,12 +5,16 @@
              Title="NewPage1"
              BackgroundImageSource="background.png">
     <ScrollView>
-        <VerticalStackLayout HorizontalOptions="Fill">
-            <Label 
-            Text="Dzień dobry, User"
-            TextColor="Black"
-            HorizontalTextAlignment="Start" FontSize="32"
-            Padding="20,40,10,10"/>
+        <VerticalStackLayout>
+            <HorizontalStackLayout VerticalOptions="Center" Padding="20,40,10,10">
+                <Label 
+                    Text="Dzień dobry, User"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Start" FontSize="32"
+                    />
+                <ImageButton Source="back_arrow.png" Margin="10,0,0,0" WidthRequest="28" HeightRequest="20" Clicked="ImageButton_Clicked"/>
+            </HorizontalStackLayout>
+            
             <Grid BackgroundColor="#63ADD8E6" Margin="15">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -20,7 +24,7 @@
                     <ColumnDefinition Width="4*"/>
                 </Grid.ColumnDefinitions>
                 <Label Text="Saldo:" Grid.Column="0" Grid.Row="0" TextColor="Black" FontSize="28" Padding="20"/>
-                <Label Text="715234,63 PLN" Grid.Column="1" Grid.Row="0" TextColor="Black" FontSize="28" Padding="20"/>
+                <Label x:Name="saldo_all_amount" Text="715234,63 PLN" Grid.Column="1" Grid.Row="0" TextColor="Black" FontSize="28" Padding="20"/>
             </Grid>
             <Grid BackgroundColor="#63ADD8E6" Margin="15">
                 <Grid.RowDefinitions>
@@ -33,7 +37,7 @@
                 </Grid.ColumnDefinitions>
                 <Label Text="PKO Konto dla Młodzieży" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" TextColor="Black" FontSize="14" Padding="20,5,5,5"/>
                 <Label Text="Saldo:" Grid.Column="0" Grid.Row="1" TextColor="Black" FontSize="28" Padding="20,5,20,15"/>
-                <Label Text="715234,63 PLN" Grid.Column="1" Grid.Row="1" TextColor="Black" FontSize="28" Padding="20,5,20,15"/>
+                <Label x:Name="saldo_konto_amount" Text="715234,63 PLN" Grid.Column="1" Grid.Row="1" TextColor="Black" FontSize="28" Padding="20,5,20,15"/>
             </Grid>
             <Grid BackgroundColor="#63ADD8E6" Margin="15">
                 <Grid.RowDefinitions>
@@ -46,7 +50,7 @@
                 </Grid.ColumnDefinitions>
                 <Label Text="PKO Konto oszczędnościowe" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" TextColor="Black" FontSize="14" Padding="20,5,5,5"/>
                 <Label Text="Saldo:" Grid.Column="0" Grid.Row="1" TextColor="Black" FontSize="28" Padding="20,5,20,15"/>
-                <Label Text="0 PLN" Grid.Column="1" Grid.Row="1" TextColor="Black" FontSize="28" Padding="20,5,20,15"/>
+                <Label x:Name="saldo_oszcz_amount" Text="0 PLN" Grid.Column="1" Grid.Row="1" TextColor="Black" FontSize="28" Padding="20,5,20,15"/>
             </Grid>
             <Grid Margin="15">
                 <Grid.RowDefinitions>
@@ -66,7 +70,7 @@
                     <Label Text="Oszczędności" TextColor="Black" FontSize="10" Padding="3" HorizontalTextAlignment="Center"/>
                 </VerticalStackLayout>
                 <VerticalStackLayout Margin="10">
-                    <ImageButton Source="blik_icon.png" HeightRequest="25"/>
+                    <ImageButton Source="blik_icon.png" HeightRequest="25" Clicked="ImageButton_Clicked_1"/>
                     <Label Text="BLIK" TextColor="Black" FontSize="10" Padding="3" HorizontalTextAlignment="Center"/>
                 </VerticalStackLayout>
                 <VerticalStackLayout Margin="10">

@@ -4,10 +4,43 @@
              x:Class="BankApp.BlikPage"
              BackgroundImageSource="background.png"
              Title="BlikPage">
-    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+    <VerticalStackLayout HorizontalOptions="Center">
         <Label 
-        Text="Strona BLIK"
+        Text="Transakcje BLIK"
         VerticalOptions="Center" 
-        HorizontalOptions="Center" FontSize="48"/>
+        HorizontalOptions="Center" FontSize="32" TextColor="Black"
+            Padding="10"/>
+        <Grid Padding="20" Margin="10" BackgroundColor="LightSkyBlue" >
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Label Text="z rachunku" Grid.Row="0" TextColor="Black"/>
+            <Label Text="PL12 3456 7890 1234 5678 9012 3456"
+                   Grid.Row="1" TextColor="Black" FontSize="Medium"/>
+            
+        </Grid>
+        <Grid Padding="20" Margin="10" BackgroundColor="LightSkyBlue">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="kod BLIK" Grid.Row="0" TextColor="Black"/>
+            <Label Text="528 826" x:Name="blik_code"
+                    Grid.Row="1" TextColor="Black" FontSize="72" HorizontalOptions="Center"/>
+            <ProgressBar x:Name="blik_bar" Grid.Row="2" HeightRequest="10"/>
+            <Label Text="2:00" Grid.Row="3" TextColor="Black" HorizontalOptions="Center" FontSize="Small"/>
+            <Button x:Name="blik_copy" TextColor="White" Clicked="blik_copy_Clicked" Text="Skopiuj kod" Margin="5" BackgroundColor="DarkBlue" Grid.Row="4"/>
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>

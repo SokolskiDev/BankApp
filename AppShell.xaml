@@ -9,24 +9,33 @@
     Shell.NavBarIsVisible="False"
     >
 
-    <ShellContent
-        Title="Strona główna"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage"/>
-    <ShellContent
-        Title="Strona użytkownika"
-        ContentTemplate="{DataTemplate local:UserPage}"
-        Route="UserPage"/>
-    <ShellContent
-        Title="BLIK"
-        ContentTemplate="{DataTemplate local:BlikPage}"
-        Route="BlikPage"/>
-    <ShellContent
-        Title="Przelew na telefon"
-        ContentTemplate="{DataTemplate local:MobileTransferPage}"
-        Route="MobileTransferPage"/>
-    <ShellContent
-        Title="Pomoc"
-        ContentTemplate="{DataTemplate local:HelpPage}"
-        Route="HelpPage"/>
-</Shell>
+    <FlyoutItem Title="Bank">
+
+            <ShellContent
+            Title="Strona główna"
+            Route="MainPage"
+            ContentTemplate="{DataTemplate local:MainPage}" />
+
+            <ShellContent
+            Title="Strona użytkownika"
+            Route="UserPage"
+            ContentTemplate="{DataTemplate local:UserPage}" />
+
+            <ShellContent
+            Title="BLIK"
+            Route="BlikPage"
+            ContentTemplate="{DataTemplate local:BlikPage}" />
+
+            <ShellContent
+            Title="Przelew na telefon"
+            Route="MobileTransferPage"
+            ContentTemplate="{DataTemplate local:MobileTransferPage}" />
+
+            <ShellContent
+            Title="Pomoc"
+            Route="HelpPage"
+            ContentTemplate="{DataTemplate local:HelpPage}" />
+
+        </FlyoutItem>
+
+    </Shell>
