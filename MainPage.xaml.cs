@@ -10,7 +10,7 @@
         //Login button
         private void OnCounterClicked(object? sender, EventArgs e)
         {
-            Shell.Current.GoToAsync("//UserPage");
+            Shell.Current.Navigation.PushAsync(new UserPage());
         }
 
         //Fingerprint button
@@ -21,18 +21,18 @@
 
         private void ImageButton_Clicked_1(object sender, EventArgs e)
         {
-            Shell.Current.GoToAsync("//BlikPage");
+            Shell.Current.Navigation.PushAsync(new BlikPage());
         }
 
         private void mobile_transfer_Clicked(object sender, EventArgs e)
         {
-            Shell.Current.GoToAsync("//MobileTransferPage");
+            Shell.Current.Navigation.PushAsync(new MobileTransferPage());
 
         }
 
         private void help_Clicked(object sender, EventArgs e)
         {
-            Shell.Current.GoToAsync("//HelpPage");
+            Shell.Current.Navigation.PushAsync(new HelpPage());
 
         }
     }
